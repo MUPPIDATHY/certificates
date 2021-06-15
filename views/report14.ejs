@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ponmari_Sample</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/assets/dashboard/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- bootsrtap -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/dashboard/dist/css/alter.css">
+  <link rel="stylesheet" href="/assets/dashboard/dist/css/mbbs.css">
+  <!-- Google Font Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro300,400,400i,700" rel="stylesheet">
+  <style>
+    @media print{
+body{
+ 
+  transform:scale(1.1)!important;
+  margin-top: 350px!important;
+
+}
+
+    }
+</style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="toolbar no-print">
+      <button class="btn btn-info" onclick="window.print()">
+        Print Certificate
+      </button>
+    </div>
+   
+<section id="report"class="text-dark black university"style=" color: #000;">
+  <div class="container text-dark">
+<div class="row mt-5">
+    <div class="col-md-3 ">
+        <img src="/assets/img/girl (2).jpg"width="180"alt="logo"class="img-fluid">
+        </div>
+        <div class="col-md-8 "id="head">
+            <p><b>Cost of application form: Rs. 100/-,</b></p>
+            <p class="ml-5">(For application downloaded from the Web site, candidates are instructed to pay Rs.50/- in addition to the
+                prescribed fees for registration, otherwise it will be rejected.)</span> </p>
+        
+            <h2 class="text-center pl-5">THE TAMILNADU Dr. M.G.R. MEDICAL UNIVERSITY
+            </h2>
+            <p class="text-center pl-5">NO. 69, Anna Salai, Guindy, Chennai - 600 032.</p>
+
+            <br>
+            <h2 class="text-center pl-4">APPLICATION FOR REGISTRATION FOR U.G. COURSES <br>MEDICAL
+<br>M.B.B.S.
+            </h2>
+            <p class="text-center pl-5">(Incomplete Applications will be rejected)</p>
+        </div>
+       
+            <div class="col-md-4">
+                <p>Year of Admission</p>
+                <ol>
+                   <li > <p>Name of the Candidate
+                        in BLOCK LETTERS
+                        (As entered in the Higher
+                        Secondary Certificate)<br>
+                       <p class="mt-3"> <span >(a) Expansion of Initials</span></p>
+                        
+                        <p class="mt-"><span >(b) Name in Tamil </span></p>
+                       </p>
+                       
+                       </li>
+                       <li class="mt-3"><p>Sex</p></li>
+                       <li class=""><p>Date of Birth (Christian
+                        Era) Evidence should be
+                        enclosed<br>
+                        <p style="width: 812px;
+                        ">(The candidate should have completed 17 Years of age at the time of admission or should complete the
+                          age on or before 31st December of the year of admission) </p>
+                        </p></li>
+                      <li style="margin-top: 60px;"><p> (a) Name of Father/ Guardian</p>
+                      <p> (b)Name of Mother </p>
+                      <p>(c) Native Place </p>
+                      <p>(d) Permanent residential address</p>
+                      <p class="mt-5 pt-5">(e) Present address</p>
+                      <p class="mt-5 pt-5">Email Id </p>
+                      <p class="">Mobile  </p>
+                      <p class="">Landline  </p>
+                    </li>
+                    <li class=""style="    margin-top: 200px;
+                    padding-top: 100px;"
+                >
+                      <p class="mt-5">(a) Religion  </p>
+                      <p class="">(b) Community </p>
+                      <p class="">(c) State whether SC/ST/MBC/
+                        DC/BC/others (Original
+                        community certificate should
+                        be enclosed)
+                       </p>
+                    </li>
+                    <li class="">
+                      <p class="">(a) Category which admitted to
+                        the course(Govt/Management)
+                        etc 
+                       </p>
+                       <p>(b) Date of joining the course</p>
+                    </li>
+                    <li>
+                      <p class=""style="width:578px"> Qualification and marks obtained (original mark sheet to be enclosed)
+
+                       
+                       </p>
+                       <div class="table-responsive text-center" style="width: 850px;">
+                        <table class="table table-bordered" id="tablereport">
+                      <thead>
+                        <tr>
+                          <th scope="col">Examination
+                            passed</th>
+                          <th scope="col">Name of the
+                            Board (State/
+                            Central/Others) 
+                    </th>
+                          <th scope="col" width="200px">School / College</th>
+                          <th scope="col">Duration
+                            Of the
+                            Course </th>
+                                <th scope="col">Register
+                                  No. </th>
+                          <th scope="col">Month/
+                            Year of
+                            Passing </th>
+                          
+                          
+                    
+                        </tr>
+                      </thead>
+                      <%
+        if(userData4.length!=0){
+        var i=1;
+        userData4.forEach(function(classdata4){
+        %>
+                    <tbody>
+                      <tr class="p-5"style="height:180px">
+                        <td><%=classdata4.exam_passed%></td>
+                        <td><%=classdata4.board%></td>
+                        <td><%=classdata4.institute_name%></td>
+
+                        <td><%=classdata4.duration%></td>
+                        <td><%=classdata4.register_no%></td>
+                        <td><%=classdata4.month_of_passing%>/ <%=classdata4.year_of_passing%></td>
+
+                      </tr>
+                    </tbody>
+                    <%  i++; }) %>
+                    <% } else{ %>
+                    
+                    <% } %>
+                    </table> 
+                    
+                      </div>
+                    </li>
+                    <li style="list-style: none;"class="mt-5">
+                      <div class="table-responsive text-center" style="width: 850px;">
+                        <table class="table table-bordered" id="tablereport">
+                      <thead>
+                        <tr>
+                          <th scope="col">Subject</th>
+                          <th scope="col">English  
+                    </th>
+                          <th scope="col" width="200px">Physics</th>
+                          <th scope="col">Chemistry</th>
+                                <th scope="col">Botany </th>
+                          <th scope="col">Zoology </th>
+                          <th scope="col">Biology/
+                            Maths </th>
+                          
+                    
+                        </tr>
+                      </thead>
+                      <%
+                      if(userData5.length!=0){
+                      var i=1;
+                      userData5.forEach(function(classdata5){
+                      %>
+                    <tbody>
+                      <tr class="p-5"style="">
+                        <td>Maximum
+                          Marks </td>
+                          <td><%=classdata5.eng_max %> </td>
+                          <td><%=classdata5.phy_max %> </td>
+                          <td><%=classdata5.chem_max %> </td>
+                          <td><%=classdata5.bot_max %> </td>
+                          <td><%=classdata5.zoo_max %> </td>
+                          <td><%=classdata5.bio_max %> </td>
+                      </tr>
+                      <tr class="p-5"style="">
+                        <td>Marks
+                          Obtained </td>
+                          <td><%=classdata5.eng_total %> </td>
+                          <td><%=classdata5.phy_total %> </td>
+                          <td><%=classdata5.chem_total %> </td>
+                          <td><%=classdata5.bot_total %> </td>
+                          <td><%=classdata5.zoo_total %> </td>
+                          <td><%=classdata5.bio_total %> </td>
+                      </tr>
+                    </tbody>
+                    <%  i++; }) %>
+                    <% } else{ %>
+                    
+                    <% } %>
+                    </table> 
+                    
+                      </div>
+                    </li>
+                    <li style="list-style: none;">
+                      <p style="width: 830px;
+                      ">FOR CANDIDATES WHO HAVE PASSED THE QUALIFYING EXAMINATION OTHER THAN
+                        H.S.C. OF TAMILNADU</p>
+                        <p>Whether Eligibility Certificate
+                          obtained from The T.N Dr.
+                          M.G.R Medical University is</p>
+                          <p>Whether Transfer Certificate is
+                            enclosed</p>
+                            <p style="    width: 830px;list-style: none;
+                            ">FOR CANDIDATES WHO HAVE PASSED THE QUALIFYING EXAMINATION ABROAD
+      </p>
+      <p>Whether Eligibility Certificate
+        obtained from the T.N. Dr.
+        M.G.R. Medical University is
+        enclosed</p>
+                    </li>
+                    <li style="list-style: none;"class="mt-5 pt-3">
+                      <p class="pt-4">Whether passport and "Student
+                        Visa" have been obtained (Xerox
+                        Copies should be enclosed)
+                        </p>
+                        
+                    </li>
+                    <li style="list-style: none;">
+                      <p>Blood Group
+                        (Certificate from a competent
+                        person should be enclosed)
+                        </p>
+                        
+                    </li>
+                    <li style="list-style: none;">
+                      <p>Contact Phone No</p></li>
+                      <li style="list-style: none;">
+
+                      <p>Willingness to donate blood
+                    </p></li>
+<li style="list-style: none;"><b><u>Note:
+</u></b></li>
+<li style="list-style: none;">
+<p style="width:783px">The following certificates in original should be submitted with the application with one set of Xerox
+  copy of the originals failing which candidate will not be registered for the course.</p>
+  <ol>
+    <li style="width:783px"><p>H.Sc/Equivalent Mark statement(s).</p></li>
+    <li style="width:783px"><p> Transfer Certificate
+      .</p></li>
+    <li style="width:783px"><p>. Proof for Date of Birth (in case if it is not available in T.C/Mark Statement).</p></li>
+    <li style="width:783px"><p>Allotment order of the Selection Committee for the candidates admitted under Govt.Quota.</p></li>
+    <li style="width:783px"><p>Migration Certificate for non-H.Sc candidates i.e., other than H.Sc of Tamil Nadu.</p></li>
+    <li style="width:783px"><p>No Objection Certificate(NOC) for foreign candidates..</p></li>
+
+    <li style="width:783px"><p>. Eligibility Certificate obtained from this University for non-H.Sc course i.e., other than H.Sc. of
+      Tamil Nadu.</p></li>
+      <li style="width:783px"><p>Eligibility Certificate obtained from this University for foreign candidates..</p></li>
+
+  </ol>
+</li>
+                </ol>
+            </div>
+  
+            <div class="col-md-5"id="unip1">
+              <%
+              if(userData.length!=0){
+              var i=1;
+              userData.forEach(function(classdata){
+              %>
+                <p><span >:</span> &nbsp;<%=classdata.academic_year %></p>
+               
+               <li> <p><span >:</span> &nbsp;<%=classdata.name %> <%=classdata.initial %></p>
+                <p class=""style="margin-top: 90px;"><span >:</span> &nbsp; <%=classdata.initial_expansion %></p>
+                <p></p>
+                </li>
+                <li><p class="mt-5 pt-2"><span >:</span> &nbsp;<%=classdata.gender %></p></li>
+               <li> <p class="mb-5 pb-3"><span >:</span> &nbsp;<%=classdata.date_of_birth %></p></li>
+               <li style="      margin-top: 101px;"
+               > <p class="mt-5 pt-5"><span >:</span> &nbsp;<%=classdata.father_name %></p>
+                <p><span >:</span> &nbsp;<%=classdata.mother_name %></p>
+               
+                <%
+                if(userData2.length!=0){
+                var i=1;
+                userData2.forEach(function(classdata2){
+                %>
+                <p class=""><span >:</span> &nbsp;<%=classdata2.ps_district %></p>
+                <p class=""><address style="font-size: 20px;line-height: 30px;"><span >:</span> &nbsp;<%=classdata2.ps_address %><br>&nbsp; &nbsp;&nbsp;<%=classdata2.ps_district %>
+                  <%=classdata2.ps_pincode %><br>&nbsp;&nbsp;&nbsp;<%=classdata2.ps_state %>
+                </address></p>
+                
+               
+                <p class="mt-4 "><address class="pt-3" style="font-size: 20px;line-height: 30px;"><span >:</span> &nbsp;<%=classdata2.ps_address %><br>&nbsp; &nbsp;&nbsp;<%=classdata2.ps_district %>
+                  <%=classdata2.ps_pincode %><br>&nbsp;&nbsp;&nbsp;<%=classdata2.ps_state %>
+                </address></p>
+                
+                
+               </li>
+                <%  i++; }) %>
+                <% } else{ %>
+                
+                <% } %>
+                <%
+                if(userData8.length!=0){
+                var i=1;
+                userData8.forEach(function(classdata8){
+                %>
+               <li> <p><span >:</span> &nbsp;<%=classdata8.email_id %></p>
+                <p><span >:</span> &nbsp;<%=classdata8.mobile_phone %></p>
+                <p><span >:</span> &nbsp;<%=classdata8.tel_phone %></p></li>
+
+                <%  i++; }) %>
+                <% } else{ %>
+                
+                <% } %>
+                <li style="    margin-top: 200px;
+                padding-top: 142px;"><p ><span >:</span> &nbsp;<%=classdata.religion %></p>
+                <p><span >:</span> &nbsp;<%=classdata.community %></p></li>
+                <%
+                if(userData1.length!=0){
+                var i=1;
+                userData1.forEach(function(classdata1){
+                %>
+               <li style="    margin-top: 150px;
+               "> <p><span >:</span> &nbsp;<%=classdata1.selected_category %></p>
+                <p class="pt-5"><span >:</span> &nbsp;<%=classdata1.date_of_admission %></p></li>
+
+                <%  i++; }) %>
+                <% } else{ %>
+                
+                <% } %>
+               <li style="list-style: none;position: relative;
+                   top: 1370px;
+"> <p><%=classdata.blood_group %></p>
+                <p class="mt-5 "><%=classdata.willing_to_donate_blood %></p>
+</li>
+                <%  i++; }) %>
+                <% } else{ %>
+                
+                <% } %>
+            </div>
+            <%
+            if(userData12.length!=0){
+            var i=1;
+            userData12.forEach(function(classdata12){
+            %>
+            <div class="col-md-3">
+                <img src="/uploads/<%=classdata12.Filename %>"alt="img"class="img-fluid"width="200"height="150">
+            </div>
+            <%  i++; }) %>
+            <% } else{ %>
+            
+            <% } %>
+        
+</div>
+<section id="unibottom"class="text-dark">
+  <h5 class="text-center text-dark"style="font-size:20px"> <u>DECLARATION BY THE CANDIDATE</u></h5>
+  <br>
+  <p style="text-indent: 4cm;"class="text-dark">I declare that the particulars mentioned above are true and I will not claim/--------- ask for any<br>
+    change with regard to any of the particulars furnished above.<br>
+    
+     </p>
+     <p style="text-indent: 4cm;">I agree to abide by the rules and regulations of the University as framed from time to time.</p>
+<div class="row mt-100">
+  <div class="col-md-9">
+    <p>Date :</p>
+  </div>
+  <div class="col-md-3">
+    <p>Signature of the Candidate</p>
+  </div>
+</div><br><br>
+<h5 class="text-center text-dark mt-50"style="font-size:20px"> <u>CERTIFICATE BY THE HEAD OF THE INSTITUTION</u></h5>
+<p style="text-indent: 4cm;"class="text-dark">The above mentioned details are certified to be true after due verification with the relevant
+  documents and I hereby recommend the candidate for registration.
+  <br>
+  <div class="row text-dark">
+    <div class="col-md-9 mt-5">
+      <p>Place :
+      </p>
+      <p>Date :</p>
+      <p>Seal :</p>
+    </div>
+    <div class="col-md-3 mt-100">
+      <p>Signature of the Head of the</p>
+    </div>
+  </div>
+    </section>
+</div>
+</div>
+</section>
+
+
+
+ 
+<!-- jQuery bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+UPLOADCARE_PUBLIC_KEY = 'demopublickey';
+</script>
+<script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js" charset="utf-8"></script>
+<!-- AdminLTE App -->
+<script src="js/adminlte.js"></script>
+<script src="js/mbbs.js"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="js/demo.js"></script>
+<!-- page script -->
+
+
+</body>
+
+</html>
